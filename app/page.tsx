@@ -5,7 +5,7 @@ export default function Home() {
       <nav className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
           <a href="#" className="text-lg font-bold tracking-tight">
-            YOUR NAME
+            Yunho T Maths
           </a>
 
           <div className="hidden items-center gap-8 text-sm font-medium sm:flex">
