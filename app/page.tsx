@@ -21,7 +21,9 @@ export default function Home() {
           </div>
 
           <a
-            href="#contact"
+            href="https://open.kakao.com/o/s7KrRsJi"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-700"
           >
             상담 신청
@@ -53,7 +55,9 @@ export default function Home() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#contact"
+                href="https://open.kakao.com/o/s7KrRsJi"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-gray-900 px-7 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-gray-700"
               >
                 상담 신청하기
@@ -185,6 +189,8 @@ export default function Home() {
 
           <a
             href="https://open.kakao.com/o/s7KrRsJi"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-block rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-gray-900 transition hover:bg-gray-200"
           >
             문의하기
