@@ -131,19 +131,23 @@ export default function Home() {
             What I Teach
           </h2>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                title: "English",
-                description: "Reading, Vocabulary, Academic English",
+                title: "SAT ",
+                description: "Mathematics",
               },
               {
-                title: "Mathematics",
-                description: "Concepts, Problem Solving, Advanced Math",
+                title: "AP",
+                description: "Calculus AB/BC",
               },
               {
-                title: "Test Preparation",
-                description: "SAT, TOEFL, MAP 등 시험 대비",
+                title: "Subject SAT",
+                description: "Mathematics 1,2",
+              },
+              {
+                title: "AMC 10/12",
+                description: "American Mathematics Contest",
               },
             ].map((item) => (
               <div
@@ -180,7 +184,7 @@ export default function Home() {
           </p>
 
           <a
-            href="mailto:example@email.com"
+            href="https://open.kakao.com/o/s7KrRsJi"
             className="mt-8 inline-block rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-gray-900 transition hover:bg-gray-200"
           >
             문의하기
