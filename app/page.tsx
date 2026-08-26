@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -34,7 +36,7 @@ export default function Home() {
       {/* Hero */}
       <section className="flex min-h-screen items-center px-5 pb-16 pt-28 sm:px-8">
         <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          
+
           {/* Text */}
           <div>
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
@@ -48,9 +50,9 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-7 text-gray-600 sm:text-lg">
-              학생의 현재 실력과 목표를 바탕으로
+              AMC 12 Winner & NYU 수학 전공 출신 강사가
               <br className="hidden sm:block" />
-              개인에게 맞는 학습 방법을 함께 만들어갑니다.
+              수학 천재가 되는 방법을 알려드립니다.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -80,22 +82,20 @@ export default function Home() {
 
           {/* Profile Card */}
           <div className="relative mx-auto w-full max-w-md lg:ml-auto">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-gray-100">
-              {/* 나중에 선생님 사진으로 교체 */}
-              <div className="flex h-full items-center justify-center text-gray-400">
-                <div className="text-center">
-                  <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gray-200 text-2xl">
-                    👤
-                  </div>
-                  <p className="text-sm">Profile Photo</p>
-                </div>
-              </div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-gray-100">
+              <Image
+                src="/profile.jpg"
+                alt="Profile photo"
+                fill
+                priority
+                className="object-cover"
+              />
             </div>
 
             {/* Floating card */}
             <div className="absolute -bottom-5 -left-3 rounded-2xl border border-gray-100 bg-white p-4 shadow-lg sm:-left-6">
-              <p className="text-xs text-gray-400">PERSONALIZED</p>
-              <p className="mt-1 font-semibold">Your goals, your plan.</p>
+              <p className="text-xs text-gray-400">연구원 시절 사진</p>
+              <p className="mt-1 font-semibold">UAE BRC 동물복제 연구소</p>
             </div>
           </div>
         </div>
@@ -135,33 +135,52 @@ export default function Home() {
             What I Teach
           </h2>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                title: "SAT ",
+                title: "SAT",
+                price: "₩45,000",
                 description: "Mathematics",
               },
               {
-                title: "AP",
-                description: "Calculus AB/BC",
-              },
-              {
                 title: "Subject SAT",
-                description: "Mathematics 1,2",
+                price: "₩50,000",
+                description: "Mathematics Level 1 / 2",
               },
               {
-                title: "AMC 10/12",
-                description: "American Mathematics Contest",
+                title: "AP",
+                price: "₩50,000",
+                description: "Calculus AB / BC, Precalculus",
+              },
+              {
+                title: "AMC 10 / 12",
+                price: "₩50,000",
+                description: "American Mathematics Competition",
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-md"
+                className="group flex min-h-[190px] flex-col justify-between rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-lg"
               >
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-gray-500">
-                  {item.description}
-                </p>
+                <div>
+                  <h3 className="text-xl font-semibold tracking-tight">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-6 text-gray-500">
+                    {item.description}
+                  </p>
+                </div>
+
+                <div className="mt-8">
+                  <p className="text-lg font-bold">
+                    {item.price}
+                  </p>
+
+                  <p className="mt-1 text-xs text-gray-400">
+                    / hours
+                  </p>
+                </div>
               </div>
             ))}
           </div>
